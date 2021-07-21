@@ -1,0 +1,15 @@
+<title>Eliminar producto</title>
+<h1>Eliminar producto</h1>
+
+<%if(product_list.length===0){%>
+    <h1>No hay productos añadidos</h1>
+    <%} else{%>
+        <form action="/delete-product" method="POST">
+            <div>
+                <label for="productName">Nombre del producto:</label>
+                <input type="text" id="productName" name="productName" placeholder="Nombre del producto" required>
+            </div>
+            <button type="submit">Eliminar producto</button>
+        </form>
+    <%}%>
+<%- include("partials/returnHome.ejs") %>

@@ -1,0 +1,8 @@
+<title>Crear producto</title>
+<h1>Crear producto</h1>
+<form action="/create-product" method="POST">
+    <label for="productName">Nombre del producto:</label>
+    <input type="text" id="productName" name="productName" placeholder="Nombre del producto" required>
+    <button type="submit">Añadir producto</button>
+</form>
+<%- include("partials/returnHome.ejs") %>

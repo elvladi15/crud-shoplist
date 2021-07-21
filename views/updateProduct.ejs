@@ -1,0 +1,20 @@
+<title>Actualizar producto</title>
+<h1>Actualizar producto</h1>
+
+<%if(product_list.length===0){ %>
+    <h1>No hay productos añadidos</h1>
+<%} else{ %>
+    <form action="/update-product" method="POST">
+        <div>
+            <label for="productName">Nombre del producto:</label>
+            <input type="text" id="productName" name="productName" placeholder="Nombre del producto" required>
+        </div>
+        <br>
+        <div>
+            <label for="newName">Nuevo nombre del producto:</label>
+            <input type="text" id="newName" name="newName" placeholder="Nombre del nuevo producto" required>
+        </div>
+        <button type="submit">Actualizar producto</button>
+    </form>
+<%}%>
+<%- include("partials/returnHome.ejs") %>

@@ -1,0 +1,17 @@
+<title>Listar productos</title>
+<h1>Lista de productos</h1>
+
+<%if(product_list.length===0){%>
+    <h1>No hay productos añadidos</h1>
+<%} else{%>
+    <ul>
+        <% for (const product of product_list) {%>
+            <li>
+                <p>
+                    <%= product.name %>
+                </p>
+            </li>
+        <% } %>
+    </ul>
+<%}%>
+<%- include("partials/returnHome.ejs") %>
